@@ -9,10 +9,12 @@
       if (window.location.search.substring(1).indexOf("error") !== -1) {
         // login failure
         console.log("error");
+	// or maybe alert the user and say what the error message is
       } else if (hash) {
         // login success
         var token = window.location.hash.split('&')[0].split('=')[1];
         localStorage.setItem('spotify-token', token);
+	// AWESOME
       }
     }
   </script>

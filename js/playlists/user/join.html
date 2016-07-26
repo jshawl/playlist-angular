@@ -5,6 +5,7 @@
   <input type="text" ng-model="access_code" placeholder="playlist code">
 </form>
 <h2>Your name is: <span class=codes> {{name}}</span></h2>
+<!-- how is this working without vm. ? -->
 <h2>Your playlist code is:<span class=codes>  {{access_code}}</span></h2>
 <br><br><br>
 <button class="big" data-ng-click="JoinViewModel.join_plist(name, access_code)">Join Playlist</button>

@@ -1,7 +1,6 @@
 <button class="btn"><a data-ui-sref="Home">Back to home</a></button>
 <button class="btn"><a data-ui-sref="Add({id: CurrentPlaylistViewModel.playlist_id, user: CurrentPlaylistViewModel.user_name})">Add Some More Songs</a></button>
 
-<!-- <button class="button" data-ng-click="AdminPlistViewModel.refresh_token()">Refresh Token</button> -->
 <button id="update" data-ng-hide="true" class="btn" data-ng-click="CurrentPlaylist.playlistSort()">Update Playlist</button>
 <br>
 <br>
@@ -19,6 +18,9 @@
         </div>
         <div class="songdesc"><p>
           {{song.title}} by {{song.artist}}&nbsp&nbsp-&nbsp&nbsp{{song.user}}</p>
+	  <!-- this view is very similar to admin_plist 
+	    can you think of a way to combine the two? 
+	  -->
         </div>
 
     </div>

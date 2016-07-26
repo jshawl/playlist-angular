@@ -24,6 +24,7 @@
         PlaylistFactory.get({id: $stateParams.id}).$promise.then(function(response) {
             vm.playlist = response;
             vm.play_song = $sce.trustAsHtml("<iframe src='https://embed.spotify.com/?uri=spotify:user:"+vm.playlist.spotify_user_id+":playlist:"+vm.playlist.spotify_playlist_id+"' width='300' height='380' frameborder='0' allowtransparency='true'></iframe>");
+	    // can this be moved to html? -->
         });
         vm.songs = SongFactory.query({playlist_id: $stateParams.id});
         vm.playlist_counter = 2;
@@ -41,6 +42,7 @@
             }
             console.log(vm.list_of_scores);
             vm.max_score = Math.max(...vm.list_of_scores);
+	                           // ^^^^ AMAMAMAMAZINGGGG!!!
 
             vm.next_song = vm.songs.filter(function( obj ) {
                 if (obj.active === true) {
@@ -60,11 +62,7 @@
                       "Accept": "application/json",
                       "Authorization": "Bearer "+vm.playlist.access_token
                   }
-                 })//.then(function successCallback(response) {
-                //     console.log(response);
-                //   }, function errorCallback(response) {
-                //     console.log(response);
-                // });
+                 })//remove commented out code
             })
         }
 
@@ -87,23 +85,6 @@
             song.$delete({playlist_id: vm.playlist.id, id: song.id});
             $state.reload();
         }
-
-/// function starts for timer
-    //   var c=60;
-    //   $scope.message="You have "+c+" seconds to vote on the next song.";
-    //   var timer=$interval (function{
-    //     $scope.message="You have "+c+" seconds to vote on the next song.";
-    //     c--;
-    //     console.log(c);
-    //     if(c==0){
-    //       vm.playlistSort();
-    //     }
-    //   },1000);
-
-
-
-
-
 
     }
 

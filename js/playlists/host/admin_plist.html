@@ -1,25 +1,3 @@
-<!--
-<h3>Admin_Plist.html</h3>
-
-<button class="button"><a data-ui-sref="Home">Back to home</a></button>
-
-
-<h2>Admin Playlist!</h2>
-<br>
-<button class="button" data-ng-click="AdminPlistViewModel.refresh_token()">Refresh Token</button>
-<button class="button" data-ng-click="AdminPlistViewModel.playlistSort()">Update Playlist</button>
-<br>
-<br>
-<div data-ng-bind-html="AdminPlistViewModel.play_song"></div>
-<div class="songs">
-    <div class="adminsong" data-ng-repeat="song in AdminPlistViewModel.songs | orderBy: 'score' : true | filter: {active: true} ">
-        <p><button class="button" data-ng-click="AdminPlistViewModel.remove_song(song)">&#x2717</button>&nbsp&nbsp-&nbsp&nbsp{{song.score}}&nbsp&nbsp-&nbsp&nbsp{{song.title}}&nbsp&nbsp-&nbsp&nbsp{{song.artist}}&nbsp&nbsp-&nbsp&nbsp
-            <button class="button" data-ng-click="AdminPlistViewModel.update_score(song, 1)">Vote up</button>&nbsp&nbsp-&nbsp&nbsp
-            <button class="button" data-ng-click="AdminPlistViewModel.update_score(song, -1)">Vote down</button>
-        </p>
-        <img data-ng-src="{{song.album_art}}" alt="{{song.title}}" />
-    </div>
-</div> -->
 
 <button class="btn" data-ng-click="AdminPlistViewModel.refresh_token()">Refresh Token</button>
 <button class="btn" data-ng-click="AdminPlistViewModel.playlistSort()">Update Playlist</button>
@@ -41,7 +19,8 @@
           <button class="btn btn-warning" data-ng-click="AdminPlistViewModel.remove_song(song)">Remove</button>
         </div>
         <div class="songdesc"><p>
-          {{song.title}} by {{song.artist}}&nbsp&nbsp-&nbsp&nbsp{{song.user}}</p>
+          {{song.title}} by {{song.artist}}&nbsp;&nbsp;-&nbsp;&nbsp;{{song.user}}</p>
+	  <!-- use css instead of &nbsp; -->
         </div>
 
 

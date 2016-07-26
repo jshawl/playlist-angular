@@ -22,6 +22,8 @@
         PlaylistFactory.get({id: $stateParams.id}).$promise.then(function(response) {
             vm.playlist = response;
             vm.play_song = $sce.trustAsHtml("<iframe src='https://embed.spotify.com/?uri=spotify:user:"+vm.playlist.spotify_user_id+":playlist:"+vm.playlist.spotify_playlist_id+"' width='300' height='380' frameborder='0' allowtransparency='true'></iframe>");
+	    // can you move this ifram to html, and use spotify info as variables?
+	    // maybe even wrap it in a ng-if to prevent showing before songs are in there
         });
         vm.songs = SongFactory.query({playlist_id: $stateParams.id});
 
@@ -56,6 +58,9 @@
                       "Accept": "application/json",
                       "Authorization": "Bearer "+vm.playlist.access_token
                     }
+		    // maybe you could move this logic to the rails api as well to keep tokens secret.
+		    //
+		    // e.g. POST rails-api://add-track
                   }).then(function successCallback(response){
                     console.log(response);
                     vm.next_song[0].active = false;

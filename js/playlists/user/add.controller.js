@@ -34,7 +34,6 @@
     vm.add_song = function (title, artist, album, image_url, duration, preview, uri) {
         console.log(vm.playlist.spotify_playlist_id);
         console.log(vm.playlist.access_token);
-        // Spotify.addPlaylistTracks(vm.playlist.spotify_user_id, vm.playlist.spotify_playlist_id, uri, vm.playlist.access_token);
         if (vm.playlist.first_add == false) {
             $http({
               method: "POST",

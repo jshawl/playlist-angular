@@ -1,29 +1,3 @@
-<!-- <form data-ng-submit="AddViewModel.search(vm.song_search)">
-  <input type="text" data-ng-model="vm.song_search" placeholder="Search for a song..." />
-  <button type="submit">Search</button>
-</form>
-<table>
-  <thead>
-    <tr>
-      <td>#</td>
-      <th>Title</th>
-      <th>Artist</th>
-      <th>Album</th>
-      <th>Album Art</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr data-ng-repeat="track in AddViewModel.songs.tracks.items">
-      <td><button data-ng-click="AddViewModel.add_song(track.name, track.artists[0].name, track.album.name, track.album.images[1].url, track.duration_ms, track.preview_url, track.uri)">{{$index+1}}</button></td>
-      <td>{{track.name}}</td>
-      <td>{{track.artists[0].name}}</td>
-      <td>{{track.album.name}}</td>
-      <td><img ng-src={{track.album.images[1].url}} style="height: 50px" /></td>
-    </tr>
-  </tbody>
-</table>
-<button class="button"><a data-ui-sref="CurrentPlaylist({id: {{AddViewModel.playlist_id}}})">Playlist
-</a></button> -->
 <button class="big" data-ng-if="localStorage.getItem('admin-token')==undefined"><a data-ui-sref="CurrentPlaylist({id: AddViewModel.playlist_id, user: AddViewModel.user_name})">Playlist</a></button>
 <button class="big" data-ng-if="localStorage.getItem('admin-token')!=undefined"><a data-ui-sref="AdminPlist({id: AddViewModel.playlist_id})">Admin Playlist</a></button>
 <br>

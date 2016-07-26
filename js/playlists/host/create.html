@@ -1,26 +1,3 @@
-<!--
-<h3>Create.html</h3>
-
-<button class="button"><a data-ui-sref="Home" >Back to home</a></button>
-
-
-<h2>Create a new Playlist!</h2>
-
-<p>First you need to log in to Spotify:</p>
-<h5>Don't worry, your friends won't need to log in.</h5>
-<br>
-<button class="button" data-ng-click="CreateViewModel.login()">Log in to Spotify</button>
-<br>
-
-<div data-ng-if="CreateViewModel.login_check == 1">
-    <form data-ng-submit="CreateViewModel.create(name, access_code, songs_per_user, location)">
-        <input placeholder="Name" data-ng-model="name" />
-        <input placeholder="Access code" data-ng-model="access_code" />
-        <input placeholder="Songs per user (default no limit)" data-ng-model="songs_per_user" />
-        <input type="textarea" placeholder="Location" data-ng-model="location" />
-        <button type="submit">Create</button>
-    </form>
-</div> -->
 
 <h2>Create a new Playlist!</h2>
 
@@ -37,7 +14,6 @@
         <input placeholder="Access code" data-ng-model="access_code" />
         <input placeholder="Songs per user" data-ng-model="songs_per_user" />
         <input type="textarea" placeholder="Location" data-ng-model="location" />
-        <!-- <input type="text" data-ng-model="CreateViewModel.new_playlist.access_token" value="{{CreateViewModel.access_token}}" style="display: none"/> -->
         <br><br>
         <button class="big" type="submit">Create</button>
     </form>

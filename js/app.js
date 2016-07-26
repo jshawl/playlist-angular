@@ -18,6 +18,7 @@
           SpotifyProvider.setScope('playlist-modify-private playlist-modify-public');
           // If you already have an auth token
           SpotifyProvider.setAuthToken('b4114de99b7f491b943f5eeeaf958e74');
+	  // can this be obscured in any way?
         })
 
         function RouterFunction($stateProvider) {
@@ -49,6 +50,7 @@
                 "playlist_id": null,
                 "user": null
             }
+	    // whoah did not know you could do this! awesome!
           })
           .state("Create", {
             url: "/create",
